@@ -30,8 +30,12 @@ echo '<br>';
 $arr2 = array('h' => 'Hello', 'w' => 'World', 'name' => 'NC');
 print_r($arr2);
 
-//数组下标初始化
-
+//数组下标初始化  同时存放也可以
+$arr3 = array(0 => 'like', 1=>'iwen','h' => 'Hello');
+echo '<br>';
+print_r($arr3);
+echo '<br>';
+echo $arr3[0];
 
 
 
