@@ -20,15 +20,14 @@ require_once 'functions.php'
  */
 header('Content-Type:text/html;charset=utf-8');
 $conn = connectionDb();
-mysql_select_db('myapp');
-mysql_query("set names 'utf8'");
-$result = mysql_query("SELECT * FROM users", $conn);
-$dataCount = mysql_num_rows($result);
+$conn -> set_charset('utf8');
+$res = $conn -> query("SELECT * FROM users");
+$dataCount = mysqli_num_rows($res);
 //echo $dataCount;
 echo "<table width='100%'>
 <tr><th>id</th><th>名字</th><th>年龄</th></tr>";
 for($i=0;$i<$dataCount;$i++){
-    $result_arr = mysql_fetch_assoc($result);
+    $result_arr = $res -> fetch_assoc();
     $id = $result_arr['id'];
     $name = $result_arr['name'];
     $age = $result_arr['age'];

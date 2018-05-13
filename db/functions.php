@@ -8,5 +8,5 @@
 require_once 'config.php';
 
 function connectionDb(){
-    return mysql_connect(MYSQL_HOST,MYSQLO_USER,MYSQO_PW);
+    return mysqli_connect(MYSQL_HOST,MYSQLO_USER,MYSQO_PW,MYSQO_DB);
 }

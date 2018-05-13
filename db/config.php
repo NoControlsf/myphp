@@ -9,3 +9,4 @@
 define('MYSQL_HOST','localhost');
 define('MYSQLO_USER', 'root');
 define('MYSQO_PW', '');
+define('MYSQO_DB', 'myapp');
